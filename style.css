@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+/* RESET */
+
+*{
+  box-sizing: border-box;
+}
+
+body, h1, h2, p, ul, li {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #222222;
+  background: #8A2387;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F27121, #E94057, #8A2387); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+h1{
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  font-weight: normal;
+}
+
+/* COUNTDOWN */
+.countdown-container{
+  display: flex;
+  margin-top: 1.5rem
+}
+.title{
+  font-weight: bold;
+  font-size: 6rem;
+  line-height: 1;
+  margin: 0 2rem;
+}
+.countdown-item{
+  text-align: center;
+}
+.countdown-item span{
+  font-size: 1.5rem;
+}
+
+#date{
+  margin-bottom: 1rem;
+  padding: 15px;
+  background: #A12A7B;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  outline: none;
+}
