@@ -34,8 +34,13 @@ img {
 }
 h1{
   font-size: 4rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-weight: normal;
+}
+span{
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.6;
 }
 
 /* COUNTDOWN */
