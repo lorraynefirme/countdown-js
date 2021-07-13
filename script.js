@@ -1,11 +1,15 @@
 var dateControl = document.querySelector('input[type="date"]');
 
 const dateToday = new Date();
-const day = dateToday.getDate(); 
+let day = dateToday.getDay();
 const month = dateToday.getMonth();
 const year = dateToday.getFullYear();
 
-dateControl.value = `${year}-0${month+1}-0${day}`;
+if(day<10)
+  day = `0${day}`;
+
+dateControl.value = `${year}-0${month+1}-${day}`;
+
 
 const dayDiv = document.querySelector('#days');
 const hourDiv = document.querySelector('#hours');
