@@ -1,7 +1,7 @@
 var dateControl = document.querySelector('input[type="date"]');
 
 const dateToday = new Date();
-let day = dateToday.getDay();
+let day = dateToday.getDate();
 const month = dateToday.getMonth();
 const year = dateToday.getFullYear();
 
@@ -9,7 +9,6 @@ if(day<10)
   day = `0${day}`;
 
 dateControl.value = `${year}-0${month+1}-${day}`;
-
 
 const dayDiv = document.querySelector('#days');
 const hourDiv = document.querySelector('#hours');
@@ -56,10 +55,10 @@ class Countdown {
   }
 }
 
+const eventos = ['keydown', 'touchstart'];
 
-dateControl.addEventListener('keydown', event =>{
-
-  if(event.key==='Enter'){
+function start(event){
+  if(event.key==='Enter' || event === 'touchstart'){
     clearInterval(timer);
 
     const date = event.target.value.split('-');
@@ -106,9 +105,9 @@ dateControl.addEventListener('keydown', event =>{
     }
 
   }
+}
 
-})
-
+eventos.forEach((evento)=> dateControl.addEventListener(evento, start));
 let timer;
 
 function showDays(date){
